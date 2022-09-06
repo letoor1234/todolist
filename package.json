@@ -1,0 +1,13 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node tasks.js",
+    "test:find": "node comandos/find.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
