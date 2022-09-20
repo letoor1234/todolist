@@ -1,15 +1,16 @@
-const tasks = require("../tasksData");
+// const tasks = require("../tasksData");
+const read = require("../crud/read");
 
-const find = (title) => {
-  return tasks.find((task) => task.title === title);
+/* const find = (title) => {
+  return read().some((task) => task.title === title);
+  
+  // for (let i = 0; i < tasks.length; i++) {
+  //  if (tasks[i].title === title) {
+  //    return true;
+  //  }
+  // }
 
-  /* for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i].title === title) {
-      return true;
-    }
-  }
+  // return false;
+}; */
 
-  return false; */
-};
-
-module.exports = find;
+module.exports = (title) => read().some( (task) => task.title === title );
