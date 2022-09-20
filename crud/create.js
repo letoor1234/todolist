@@ -1,9 +1,9 @@
 const fs = require("fs");
 const read = require("./read");
 const path = require("path");
-
+/*
 const create = (title, desc) => {
-  // Leemos nuestro archivo
+  
   const previousData = read();
 
   // Definir nuestro objeto a agregar
@@ -23,6 +23,12 @@ const create = (title, desc) => {
   fs.writeFileSync(path.join(__dirname, "../tasksData.json"), parsedData);
   // Retornamos verdadero
   return true;
+  
 };
+*/
 
-module.exports = create;
+module.exports = (title, desc) =>
+  fs.writeFileSync(
+    path.join(__dirname, "../tasksData.json"),
+    JSON.stringify([...read(), { title, desc }], null, 2)
+  );
