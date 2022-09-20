@@ -21,7 +21,7 @@ module.exports = (title) => {
   const newData = read().filter((task) => task.title !== title);
 
   fs.writeFileSync(
-    path.join(__dirname, "../taskData.json"),
+    path.join(__dirname, "../tasksData.json"),
     JSON.stringify(newData, null, 2)
   );
 };
